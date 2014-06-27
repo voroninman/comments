@@ -3,4 +3,7 @@ comments
 
 Comments handler
 
-It's a handler for comments list on Backbone.js
+**This is a handler for list comments.**
+<hr />
+Team Members
+*N. Antokhov <nikolay.antokhov@gmail.com>
