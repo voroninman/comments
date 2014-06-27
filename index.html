@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<!-- Bootstrap -->
+			<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body>
+
+<div class="container">
+		<div class="col-md-5 col-md-offset-4">
+	<div class="product-wrapper row">
+			<img class="post-image" src="http://cs607316.vk.me/v607316725/b9e/R7hcYxtusQU.jpg">
+			<div class="comments-wrapper row" data-product-id="12">
+				<ul class="comments-list">
+					<li class="row">
+						<img class="col-md-2" src="http://cs9402.vk.me/v9402725/ed3/pnBkaLvGoao.jpg">
+						<div class="col-md-10">
+							<p class="comment-author">Some Cat</p>
+							<p class="comment-content">Where I can buy it?? Or when this comment cakes with apple and banana style.</p>
+						</div>
+					</li>
+					<li class="row">
+						<img class="col-md-2" src="http://cs618727.vk.me/v618727925/c92b/I2NxNww4Mh8.jpg">
+						<div class="col-md-10">
+							<p class="comment-author">Johny Walker</p>
+							<p class="comment-content">I can give you 300$ for it and drink after moon Ahahahahaha!</p>
+						</div>
+					</li>
+				</ul>
+				<div class="row">
+					<p class="col-md-10">
+						<input class="form-control" type="text" name="comment" placeholder="Add your comment here..." />
+					</p>
+					<button class="col-md-2 btn btn-primary add-comment">Send</button>
+				</div>
+				<button class="btn expand-list">All</button>
+			</div>
+			<hr />
+		</div>
+	</div>
+		<div class="col-md-5 col-md-offset-4">
+	<div class="product-wrapper row">
+			<img class="post-image" src="http://cs617227.vk.me/v617227473/e67e/5Xb5WUwUoj4.jpg">
+			<div class="comments-wrapper" data-product-id="23">
+				<ul class="comments-list">
+					<li class="row">
+						<img class="col-md-2" src="http://cs320325.vk.me/v320325725/9482/9t1x7J4aqK0.jpg">
+						<div class="col-md-10">
+							<p class="comment-author">Penny Grow</p>
+							<p class="comment-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</li>
+					<li class="row">
+						<img class="col-md-2" src="http://cs322427.vk.me/v322427725/178a/b4zWfZxXqnQ.jpg">
+						<div class="col-md-10">
+							<p class="comment-author">Monika Gill</p>
+							<p class="comment-content">Very good product! I found new volume in few minutes at my home?</p>
+						</div>
+					</li>
+				</ul>
+				<div class="row">
+					<p class="col-md-10">
+						<input class="form-control" type="text" name="comment" placeholder="Add your comment here..." />
+					</p>
+					<button class="col-md-2 btn btn-primary add-comment">Send</button>
+				</div>
+			</div>
+			<hr />
+		</div>
+	</div>
+</div>
+
+	<script type="text/html" id="comment-template">
+		<li class="row">
+			<img class="col-md-2" src="<%= avatar %>">
+			<div class="col-md-10">
+				<p class="comment-author"><%= name %></p>
+				<p class="comment-content"><%= content %></p>
+			</div>
+		</li>
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/underscore-min.js"></script>
+	<script src="js/backbone-min.js"></script>
+	<script src="js/app.js"></script>
+	<script type="text/javascript">
+		$('.product-wrapper').each(function(){
+			var comments = new CommentsView({ el: $(this).find('.comments-wrapper') });
+		});
+	</script>
+</body>
+</html>
