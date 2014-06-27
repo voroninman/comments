@@ -7,7 +7,8 @@ Comments handler
 *Uses the Backbone.js*
 <hr />
 **Important source files:**
-- app.js
+- app.js - Main js for comments
+- index.html - HTML demo
 
-Team Members<br>
+**Team Members**<br>
 *"N. Antokhov"* <nikolay.antokhov@gmail.com>
